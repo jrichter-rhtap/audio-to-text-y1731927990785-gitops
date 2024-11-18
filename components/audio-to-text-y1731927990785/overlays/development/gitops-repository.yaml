@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: audio-to-text-y1731927990785-gitops-repository
+spec:
+  url: https://github.com/jrichter-rhtap/audio-to-text-y1731927990785-gitops
