@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: audio-to-text-y1731927990785
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-ai-dev/ai-template-bootstrap-app:latest # use pre-built to bootstrap 
-        name: app-inference 
+        - image: quay.io/jrichter/atta:92900c2efd3f400fdfda39782d7369de59dcccd4@sha256:a8c579588442deccb6f5d47ea0ffc692ca42ea6ea3bfea7cdf4b02bd8adda1c3 # use pre-built to bootstrap 
+          name: app-inference
